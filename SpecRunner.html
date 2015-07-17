@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+
+    <link rel="stylesheet" href="lib/mocha/mocha.css" />
+    <script src="lib/jquery.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="lib/backbone.js"></script>
+    <script src="lib/mocha/mocha.js"></script>
+    <script src="lib/chai/chai.js"></script>
+    <script>
+      mocha.setup('bdd');
+      $(function() {
+        window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+      })
+    </script>
+
+    <!-- include source files here... -->
+    <script src="compiled/src/models/Card.js"></script>
+    <script src="compiled/src/collections/Hand.js"></script>
+    <script src="compiled/src/collections/Deck.js"></script>
+    <script src="compiled/src/models/App.js"></script>
+
+    <script src="compiled/src/views/CardView.js"></script>
+    <script src="compiled/src/views/HandView.js"></script>
+    <script src="compiled/src/views/AppView.js"></script>
+
+    <!-- include spec files here... -->
+    <script src="compiled/spec/CardSpec.js"></script>
+    <script src="compiled/spec/DeckSpec.js"></script>
+    <script src="compiled/spec/BlackjackViewSpec.js"></script>
+
+    <!-- // <script src="compiled/spec/main.js"></script> -->
+
+    <script>
+    </script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
+</html>
