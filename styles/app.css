@@ -1,14 +1,14 @@
 .card {
   float: left;
   border: solid 1px black;
-  width: 100px;
+  width: 120px;
   border-radius: 5px;
-  height: 140px;
+  height: 168px;
   margin-right: 20px;
 }
 
 .covered {
-  background-color: black;
+  background: url("../img/card-back.png") !important;
 }
 
 .hand {
