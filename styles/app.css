@@ -5,10 +5,10 @@
   border-radius: 5px;
   height: 168px;
   margin-right: 20px;
-}
+}  
 
 .covered {
-  background: url("../img/card-back.png") !important;
+  content: url("../img/card-back.png") !important;
 }
 
 .hand {

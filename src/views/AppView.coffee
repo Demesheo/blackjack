@@ -7,9 +7,10 @@ class window.AppView extends Backbone.View
 
   events:
     'click .hit-button': -> @model.get('playerHand').hit()
-    'click .stand-button': -> @model.get('dealerHand').dealerLogic()
+    'click .stand-button': -> @model.get('playerHand').stand()
 
   initialize: ->
+    @model.on 'all', @updateGameStatus, @
     @render()
 
   render: ->
@@ -18,5 +19,8 @@ class window.AppView extends Backbone.View
     @$('.player-hand-container').html new HandView(collection: @model.get 'playerHand').el
     @$('.dealer-hand-container').html new HandView(collection: @model.get 'dealerHand').el
 
-  calcScorer: ->
-    
+  updateGameStatus: (event) ->
+    switch event
+      when 'win-player' then alert 'Player Wins!'
+      when 'win-dealer' then alert 'Dealer Wins :('
+      when 'push' then alert 'Push' 
